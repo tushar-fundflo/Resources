@@ -11,7 +11,7 @@ variable "eb_environment_name" {
 variable "eb_environment_platform" {
     type = string
     description = "ElasticBeanstalk Plaform"
-    default = "arn:aws:elasticbeanstalk:${params.AWS_REGION}::platform/Node.js 18 running on 64bit Amazon Linux 2023/6.0.3" 
+    default = "arn:aws:elasticbeanstalk:ap-south-1::platform/Node.js 18 running on 64bit Amazon Linux 2023/6.0.3" 
 }
 variable "eb_environment_vpc_id" {
     type = string
