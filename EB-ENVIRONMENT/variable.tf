@@ -1,11 +1,11 @@
 variable "eb_application_name" {
     type = string
     description = "ElasticBeanstalk Application Name"
-    default = "${params.EB_APP_NAME}"  
+    default = ""  
 }
 variable "eb_environment_name" {
     description = "ElasticBeanstalk Environment Name"
-    default = var.eb_application_name
+    default = ""
   
 }
 variable "eb_environment_platform" {
@@ -16,17 +16,17 @@ variable "eb_environment_platform" {
 variable "eb_environment_vpc_id" {
     type = string
     description = "ElasticBeanstalk Enviornment VPC ID"
-    default = "${elasticbeanstalkVpcExists}"
+    default = ""
 }
 variable "eb_environment_instanceprofile_name" {
     type = string
     description = "ElasticBeanstalk Enviornment EC2InstanceProfile Name"
-    default = "FUND-${params.AWS_ENV}-EBS-EC2InstanceProfile"
+    default = ""
 }
 variable "eb_environment_subnets_id" {
     type = string
     description = "ElasticBeanstalk Enviornment Subnets ID"
-    default = "${publicsubnet1},${publicsubnet2}"
+    default = ""
 }
 variable "eb_environment_instance_type" {
     type = string
