@@ -40,5 +40,6 @@ variable "eb_environment_autoscaling_maxcount" {
 }
 variable "eb_environment_application_lb_name" {
     type = string
-    description = ""
+    description = "ElasticBeanstalk Enviornment 3 ALB"
+    default = ""
 }
