@@ -1,8 +1,8 @@
 resource "aws_elastic_beanstalk_environment" "eb_env" {
   name          = var.eb_environment_name
-  application   = aws_elastic_beanstalk_application.eb_app.name
+  application   = var.eb_application_name
   platform_arn  = var.eb_environment_platform
-  cname_prefix  = aws_elastic_beanstalk_application.eb_app.name
+  cname_prefix  = var.eb_application_name
 
   setting {
     namespace = "aws:ec2:vpc"
